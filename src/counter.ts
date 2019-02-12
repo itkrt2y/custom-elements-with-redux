@@ -1,6 +1,6 @@
 import { html, render } from "lit-html";
 
-function counter(mount: HTMLElement, count: number) {
+export function counter(mount: HTMLElement, count: number) {
   const template = html`
     <p>${count}</p>
 
@@ -23,5 +23,3 @@ function counter(mount: HTMLElement, count: number) {
 
   render(template, mount);
 }
-
-counter(document.body, 0)
