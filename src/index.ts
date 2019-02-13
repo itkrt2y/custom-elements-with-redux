@@ -1,4 +1,15 @@
-import { counter } from "./counter";
+import { counter } from "./components/counter";
+import { total } from "./components/total";
+import { store } from "./store";
 
-const counters = Array.from(document.querySelectorAll<HTMLElement>(".counter"));
-counters.forEach(element => counter(element, 0));
+[].forEach.call(
+  document.querySelectorAll<HTMLElement>(".counter"),
+  (element: HTMLElement) => counter(element, 0)
+);
+
+const totalElement = document.querySelector<HTMLElement>("#total")!;
+const renderTotal = () => total(totalElement, store.getState().total);
+store.subscribe(() => {
+  renderTotal();
+});
+renderTotal();
