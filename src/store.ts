@@ -1,10 +1,5 @@
 import { createStore } from "redux";
 
-type Action = { type: "INCREMENT" } | { type: "DECREMENT" };
-interface State {
-  total: number;
-}
-
 const defaultState: State = { total: 0 };
 
 function reducer(state = defaultState, action: Action) {
