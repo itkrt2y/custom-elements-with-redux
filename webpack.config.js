@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = (_, argv) => {
   const isProd = argv.mode === "production";
@@ -25,7 +25,7 @@ module.exports = (_, argv) => {
 
     plugins: [
       new HtmlWebpackPlugin({ template: "src/index.html" }),
-      new CleanWebpackPlugin("dist")
+      new CleanWebpackPlugin()
     ]
   };
 };
