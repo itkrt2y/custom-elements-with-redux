@@ -17,7 +17,7 @@
     "webpack-dev-server": "^3.7.1"
   },
   "dependencies": {
-    "lit-html": "^1.0.0",
+    "lit-html": "^1.1.0",
     "redux": "^4.0.1"
   }
 }
